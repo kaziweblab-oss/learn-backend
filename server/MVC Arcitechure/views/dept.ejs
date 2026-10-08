@@ -1,0 +1,28 @@
+<%- include('layouts/header') %>
+<h2>Welcome to Depertment Page</h2>
+<form action="/dept" method="post">
+  <div>
+    <label for="name"> Depertment Name : </label>
+    <input
+      type="text"
+      name="name"
+      id="name"
+      placeholder="Enter Depertment Name"
+    />
+  </div>
+  <div>
+    <label for="roll">Depertment Code : </label>
+    <input
+      type="text"
+      name="deptCode"
+      id="deptCode"
+      placeholder="Enter Depertment Code"
+      inputmode="numeric"
+      oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+    />
+  </div>
+  <div>
+    <button type="submit">Add</button><button type="reset">Reset</button>
+  </div>
+</form>
+<%- include('layouts/footer') %>

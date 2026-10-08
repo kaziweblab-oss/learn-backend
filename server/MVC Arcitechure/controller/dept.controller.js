@@ -4,7 +4,7 @@ import { depts } from "../module/dept.module.js";
 
 export const getDept = (req, res) => {
   const rootDir = req.app.get("rootDir");
-  res.sendFile(path.join(rootDir + "/views/dept.html"));
+  res.render("dept", {});
 };
 
 export const postDept = (req, res, next) => {
@@ -14,6 +14,6 @@ export const postDept = (req, res, next) => {
     name: newDeptName,
     deptCode: newDeptCode,
   };
-  depts.push(newDept)
-  res.send(depts);
+  depts.push(newDept);
+  res.render("list", { depts });
 };

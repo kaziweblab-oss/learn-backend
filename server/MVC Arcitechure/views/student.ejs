@@ -1,0 +1,23 @@
+<%- include('layouts/header') %>
+<h2>Welcome to Student Page</h2>
+<form action="/student" method="post">
+  <div>
+    <label for="name"> Student Name : </label>
+    <input type="text" name="name" id="name" placeholder="Enter Student Name" />
+  </div>
+  <div>
+    <label for="roll">Student Roll : </label>
+    <input
+      type="text"
+      name="roll"
+      id="roll"
+      placeholder="Enter Student Roll"
+      inputmode="numeric"
+      oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+    />
+  </div>
+  <div>
+    <button type="submit">Register</button><button type="reset">Reset</button>
+  </div>
+</form>
+<%- include('layouts/footer') %>

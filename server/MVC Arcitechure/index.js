@@ -24,6 +24,7 @@ const __fileName = fileURLToPath(import.meta.url);
 const __dirName = path.dirname(__fileName);
 
 app.set("rootDir", __dirName);
+app.set("view engine", "ejs");
 
 /*--------------------------
  Set static Middleware Here

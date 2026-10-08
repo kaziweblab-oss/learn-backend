@@ -1,10 +1,7 @@
-import path from "path";
-
 import { students } from "../module/students.module.js";
 
 export const getStudent = (req, res) => {
-  const rootDir = req.app.get("rootDir");
-  res.sendFile(path.join(rootDir + "/views/student.html"));
+  res.render("student", {});
 };
 
 export const postStudent = (req, res, next) => {
@@ -15,5 +12,5 @@ export const postStudent = (req, res, next) => {
     roll: newStudentRoll,
   };
   students.push(newStudent);
-  res.send(students);
+  res.render('list',{students});
 };

@@ -1,0 +1,31 @@
+<%- include('layouts/header') %>
+    <% if(locals.students){ %>
+      <h2>Welcome to Student List Page</h2>
+      <% if(locals.students.length>0){ %>
+       <% students.forEach(student=>{ %>
+          <div>
+            <li><%= student.name %></li>
+            <li><%= student.roll %></li>
+          </div>
+        <% }) %>
+      <% }else{%>
+        <div>
+          <h3>No Student Found.</h3>
+        </div>
+     <% } %>
+    <% } else if(locals.depts){ %>
+      <h2>Welcome to Depertment List Page</h2>
+      <% if(locals.depts.length>0){ %>
+       <% depts.forEach(dept=>{ %>
+          <div>
+            <li><%= dept.name %></li>
+            <li><%= dept.deptCode %></li>
+          </div>
+        <% }) %>
+      <% }else{ %>
+        <div>
+          <h3>No Depertment Found</h3>
+        </div>
+      <% } %>
+    <% } %> 
+<%- include('layouts/footer') %>
