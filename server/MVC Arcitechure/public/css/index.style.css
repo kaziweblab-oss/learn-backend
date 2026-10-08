@@ -1,0 +1,48 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+h2 {
+  text-align: center;
+}
+
+.studentBtn {
+  background: orangered;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.btnSection {
+  display: flex;
+  gap: 1rem;
+}
+
+.studentBtn:hover {
+  cursor: pointer;
+  background: rgb(70, 123, 238);
+  transform: scale(1.05);
+}
+
+.deptBtn {
+  background: rgb(0, 255, 42);
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.deptBtn:hover {
+  cursor: pointer;
+  background: rgb(148, 70, 238);
+  transform: scale(1.05);
+}
